@@ -12,6 +12,14 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 20) {
+            Button("Deccrement") {
+                viewModel.decrement()
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+            
             Text("Count: \(viewModel.count)")
                 .font(.largeTitle)
 

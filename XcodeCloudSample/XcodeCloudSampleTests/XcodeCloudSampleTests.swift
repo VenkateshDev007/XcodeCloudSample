@@ -20,4 +20,13 @@ struct XcodeCloudSampleTests {
         #expect(viewModel.count == 1)
     }
 
+    @Test func decrement() async throws {
+        let viewModel = CounterViewModel()
+        
+        // Act
+        viewModel.decrement()
+        
+        // Assert
+        #expect(viewModel.count == -1)
+    }
 }

@@ -12,7 +12,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Button("Deccrement") {
+            Button(Constants.decrement) {
                 viewModel.decrement()
             }
             .padding()
@@ -20,10 +20,10 @@ struct ContentView: View {
             .foregroundColor(.white)
             .cornerRadius(8)
             
-            Text("Count: \(viewModel.count)")
+            Text("\(Constants.count) \(viewModel.count)")
                 .font(.largeTitle)
 
-            Button("Increment") {
+            Button(Constants.increment) {
                 viewModel.increment()
             }
             .padding()

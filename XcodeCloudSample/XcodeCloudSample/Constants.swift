@@ -6,7 +6,9 @@
 //
 
 enum Constants {
+    
     static let increment = "Increment"
     static let decrement = "Decrement"
     static let count = "Count:"
+    
 }

@@ -15,10 +15,7 @@ struct ContentView: View {
             Button(Constants.decrement) {
                 viewModel.decrement()
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
+            .buttonModifier()
             
             Text("\(Constants.count) \(viewModel.count)")
                 .font(.largeTitle)
@@ -26,10 +23,7 @@ struct ContentView: View {
             Button(Constants.increment) {
                 viewModel.increment()
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
+            .buttonModifier()
         }
         .padding()
     }
@@ -37,4 +31,21 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+struct ButtonModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+           
+    }
+}
+
+extension View {
+    func buttonModifier() -> some View {
+        self.modifier(ButtonModifier())
+    }
 }
